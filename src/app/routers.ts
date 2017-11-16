@@ -5,8 +5,9 @@ import { SearchSpeechComponent } from './search-speech/search-speech.component';
 
 export const AppRoutes: Routes = [
 
-  { path: 'speech', component: UserSpeechComponent },
-  { path: 'speech/new', component: NewSpeechComponent },
-  { path: 'speech/search', component: SearchSpeechComponent },
-  { path: '**', redirectTo: 'speech'}
+  { path: 'speech', component: UserSpeechComponent, },
+  { path: 'speech/:id', component: UserSpeechComponent, },
+  { path: 'new', component: NewSpeechComponent, pathMatch: 'full' },
+  { path: 'search', component: SearchSpeechComponent, pathMatch: 'full' },
+  { path: '**', redirectTo: 'speech/list'}
 ];

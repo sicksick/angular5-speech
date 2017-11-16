@@ -4,6 +4,7 @@ import { AlertModule } from 'ngx-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutes } from './routers';
+import { HttpModule } from '@angular/http';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ButtonsModule } from 'ngx-bootstrap';
@@ -33,6 +34,7 @@ import { SpeechService } from './services/speech.service';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     RouterModule.forRoot(AppRoutes),
     AlertModule.forRoot(),
     ButtonsModule.forRoot(),
@@ -45,4 +47,8 @@ import { SpeechService } from './services/speech.service';
     AppComponent
   ]
 })
-export class AppModule { }
+export class AppModule {
+  constructor (private speechService: SpeechService) {
+    this.speechService.getSpeeches();
+  }
+}

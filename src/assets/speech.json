@@ -1,0 +1,26 @@
+{
+  "speeches": [
+    {
+      "id": 0,
+      "title": "title 0",
+      "author": "author 0",
+      "content": "content 0",
+      "keywords": "keywords 0",
+      "date": "2017-11-16"
+    }, {
+      "id": 1,
+      "title": "title 1",
+      "author": "author 1",
+      "content": "content 1",
+      "keywords": "keywords 1",
+      "date": "2017-11-13"
+    }, {
+      "id": 2,
+      "title": "title 2",
+      "author": "author 2",
+      "content": "content 2",
+      "keywords": "keywords 2",
+      "date": "2017-11-15"
+    }
+  ]
+}

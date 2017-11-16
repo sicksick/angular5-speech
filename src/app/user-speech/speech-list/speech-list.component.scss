@@ -24,5 +24,27 @@
       margin: 0;
       padding: 0;
     }
+
+    .left-side-content-item {
+      span {
+        color: #2da0bb;
+        &:hover {
+          font-weight: 600;
+          cursor: pointer;
+        }
+      }
+
+      input {
+        width: 50%;
+        display: inline-block;
+        height: 40%;
+        padding: 0 0 0 5px;
+      }
+
+      span.active {
+        font-weight: 600;
+        text-decoration-line: underline;
+      }
+    }
   }
 }
