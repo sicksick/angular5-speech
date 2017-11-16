@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AlertModule } from 'ngx-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { AppRoutes } from './routers';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ButtonsModule } from 'ngx-bootstrap';
@@ -31,6 +33,7 @@ import { SpeechService } from './services/speech.service';
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot(AppRoutes),
     AlertModule.forRoot(),
     ButtonsModule.forRoot(),
     BsDropdownModule.forRoot()
