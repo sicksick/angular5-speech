@@ -1,15 +1,11 @@
 .header {
   div {
-
     padding: 25px;
 
     a {
-      margin-top: 35px;
       padding: 5px 20px;
     }
   }
-
-
 }
 
 .burger-menu-list {
@@ -22,8 +18,6 @@
 
 @media (max-width: 768px) {
   .header {
-
-
     div.header-item {
       display: none;
       padding: 25px;
@@ -37,9 +31,11 @@
 
   .burger-menu-list {
     display: block;
-    padding-left: 15px;
+    padding-left: 25px;
+    padding-bottom: 25px;
 
     a {
+      font-size: 20px;
       &:hover {
         cursor: pointer;
       }

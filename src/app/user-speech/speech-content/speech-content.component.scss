@@ -6,6 +6,10 @@
   .content-header {
     padding: 10px 0;
   }
+
+  button {
+    height: 44px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -18,4 +22,14 @@
       padding: 10px 0;
     }
   }
+}
+
+
+
+@media (max-width: 575px) {
+
+  .button-block {
+    margin-bottom: 15px;
+  }
+
 }
