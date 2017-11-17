@@ -7,3 +7,15 @@
     padding: 10px 0;
   }
 }
+
+@media (max-width: 768px) {
+  .content {
+    margin: 15px 0 15px 0;
+    padding: 0 10px 10px 10px;
+    background-color: #f2f2f2;
+
+    .content-header {
+      padding: 10px 0;
+    }
+  }
+}

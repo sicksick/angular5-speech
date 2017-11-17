@@ -1,18 +1,44 @@
 <div class="row align-items-center justify-content-center header"
      style="background-color: black; height: 50px; color: aliceblue">
-  <div>
+  <div class="header-item">
     <a role="button" routerLink="speech" routerLinkActive="active" class="btn btn-info button" >
       View my Speeches
     </a>
   </div>
-  <div>
+  <div class="header-item">
     <a role="button" routerLink="new" routerLinkActive="active" class="btn btn-info button" >
       Submit a new Speech
     </a>
   </div>
-  <div>
+  <div class="header-item">
     <a role="button" routerLink="search" routerLinkActive="active" class="btn btn-info button" >
       Search all Speeches
     </a>
   </div>
+</div>
+
+<div class="align-items-center justify-content-center burger-menu-list" *ngIf="burgerMenuToggle"
+     style="background-color: black; color: aliceblue">
+  <div >
+    <a role="button" routerLink="speech" routerLinkActive="active" >
+      View my Speeches
+    </a>
+  </div>
+  <div >
+    <a role="button" routerLink="new" routerLinkActive="active" >
+      Submit a new Speech
+    </a>
+  </div>
+  <div>
+    <a role="button" routerLink="search" routerLinkActive="active" >
+      Search all Speeches
+    </a>
+  </div>
+</div>
+
+
+<div class="burger-menu" [className]="burgerMenuToggle ? 'change burger-menu' : 'burger-menu'" (click)="menuToggle()">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
 </div>

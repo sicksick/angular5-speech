@@ -48,3 +48,17 @@
     }
   }
 }
+
+
+@media (max-width: 768px) {
+  .left-side {
+    margin: 10px 0 0 0;
+    background-color: #f2f2f2;
+    padding: 5px;
+
+    .left-side-title {
+      padding-top: 10px;
+      padding-left: 20px;
+    }
+  }
+}

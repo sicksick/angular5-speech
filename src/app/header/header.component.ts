@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public burgerMenuToggle = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public menuToggle() {
+    return this.burgerMenuToggle = !this.burgerMenuToggle;
   }
 
 }
