@@ -1,3 +1,50 @@
-<p>
-  new-speech works!
-</p>
+<div class="content">
+  <div class="row justify-content-center content-header">
+    <h2>New Speech</h2>
+  </div>
+  <div class="row">
+    <div class="col-sm-7">
+      <div class="form-group text-area-new-speech">
+              <textarea class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="speech.content" rows="13"
+                        placeholder="Speech content"></textarea>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <div class="form-group">
+        <label for="titleFormControlInput">Title</label>
+        <input type="text" class="form-control" [(ngModel)]="speech.title" id="titleFormControlInput"
+               placeholder="Title" required>
+      </div>
+      <div class="form-group">
+        <label for="authorFormControlInput">Author</label>
+        <input type="text" class="form-control" [(ngModel)]="speech.author" id="authorFormControlInput"
+               placeholder="Author">
+      </div>
+      <div class="form-group">
+        <label for="keywordsFormControlInput">Keywords</label>
+        <input type="text" class="form-control" [(ngModel)]="speech.keywords" id="keywordsFormControlInput"
+               placeholder="Keywords">
+      </div>
+      <div class="form-group">
+        <label for="dateFormControlInput">Date</label>
+        <input type="date" class="form-control" [(ngModel)]="speech.date" id="dateFormControlInput" placeholder="Date">
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-end">
+    <div class="col-sm-7">
+      <button type="button" (click)="goToNew()"  style="width: 100%" class="btn btn-success" *ngIf="newSpeechId !== null">
+        Show new speech
+      </button>
+    </div>
+    <div class="col-sm-5">
+      <button type="button" (click)="new()"  style="width: 100%" class="btn btn-info" [disabled]="checkField()">
+        New
+      </button>
+    </div>
+  </div>
+</div>
+
+<alert type="success" *ngIf="alertMessage">
+  <strong>Well done!</strong> {{alertText}}
+</alert>

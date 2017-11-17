@@ -45,4 +45,13 @@ export class SpeechService {
     this.speechesSubject.next(speeches);
   }
 
+  public addSpeech(newSpeech: any) {
+    const speeches = this.speechesSubject.getValue();
+    const maxId = Math.max.apply(Math, speeches.map(function(o){return o.id; }));
+    newSpeech.id = maxId + 1 || 1;
+    speeches.push(newSpeech);
+    this.speechesSubject.next(speeches);
+    return newSpeech.id;
+  }
+
 }

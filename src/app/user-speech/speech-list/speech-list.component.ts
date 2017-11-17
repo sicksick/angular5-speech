@@ -9,27 +9,28 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class SpeechListComponent implements OnInit, OnDestroy {
 
-  public speeches: any= [];
+  public speeches: any = [];
   public activeId: number;
-  public editingId: number;
+  public editingId: number = null;
   private speechSubscribe: any;
   private routerSubscribe: any;
 
   constructor(private speechService: SpeechService,
               private router: Router,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.speechSubscribe = this.speechService.speechesObservable
       .subscribe(speeches => {
-        this.speeches = speeches;
-        if (!this.activeId && this.speeches.length !== 0) {
-          this.router.navigate(['/speech', this.speeches[0].id]);
-        }
+        this.routerSubscribe = this.route.params.subscribe(params => {
+          this.activeId = +params['id'];
+          this.speeches = speeches;
+          if (!this.activeId && this.speeches.length !== 0) {
+            this.router.navigate(['/speech', this.speeches[0].id]);
+          }
+        });
       });
-    this.routerSubscribe = this.route.params.subscribe(params => {
-      this.activeId = +params['id'];
-    });
   }
 
   public speechTitleSave(speech) {
